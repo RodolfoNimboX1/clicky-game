@@ -39,8 +39,10 @@ a {
 }
 
 #Jumbotron {
-  background: #2c323c !important;
+  background-image: url("./dark-triangles.png") !important;
+  background-repeat: repeat;
   color: white;
+  height: 300px !important;
 }
 
 .footer {
