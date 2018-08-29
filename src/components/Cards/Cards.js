@@ -1,23 +1,40 @@
 import React from 'react';
 
-const Cards = () => (
+const Cards = props => (
 <div className="container">
 
   <div className="row">
-    <div className="col-sm">
-      One of three columns
-    </div>
-    <div className="col-sm">
-      One of three columns
-    </div>
-    <div className="col-sm">
-      One of three columns
-    </div>
-    <div className="col-sm">
-      One of four columns
-    </div>
+    
+<div className="card" style={{width: "18rem"}} onClick={() => props.setClicked(props.id)}>
+  <img className="card-img-top" src={props.image} alt={props.name} />
+  <div className="card-body">
+    <p className="card-text">{props.name}</p>
   </div>
+</div>
 
+
+    <div className="col-sm">
+
+<div className="card" style={{width: "18rem"}} onClick={() => props.setClicked(props.id)}>
+  <img className="card-img-top" src={props.image} alt={props.name} />
+  <div className="card-body">
+    <p className="card-text">{props.name}</p>
+  </div>
+</div>
+
+    </div>
+    <div className="col-sm">
+
+<div className="card" style={{width: "18rem"}} onClick={() => props.setClicked(props.id)}>
+  <img className="card-img-top" src={props.image} alt={props.name} />
+  <div className="card-body">
+    <p className="card-text">{props.name}</p>
+  </div>
+</div>
+
+    </div>
+
+  </div>
 </div>
 );
 

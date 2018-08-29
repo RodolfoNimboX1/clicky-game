@@ -1,0 +1,56 @@
+[
+    {
+    "id": 1,
+    "name": "BirdPerson",
+    "image": "./images/birdperson.jpg",
+    "clicked": "false"
+    },
+    {
+    "id": 2,
+    "name": "Evil Morty",
+    "image": "./images/evilMorty.jpg",
+    "clicked": "false"
+    },
+    {
+    "id": 3,
+    "name": "Jaguar",
+    "image": "./images/jaguar.jpg",
+    "clicked": "false"
+    },
+    {
+    "id": 4,
+    "name": "Jerry",
+    "image": "./images/jerry.jpg",
+    "clicked":"false"
+    },
+    {
+    "id": 5,
+    "name": "Mr Meesseeks",
+    "image": "./images/Mr_Meesseeks.jpg",
+    "clicked":"false"
+    },
+    {
+    "id": 6,
+    "name": "Mr Poopy",
+    "image": "./images/MrPoopy.jpg",
+    "clicked":"false"
+    },
+    {
+    "id": 7,
+    "name": "Rick",
+    "image": "./images/rick.jpg",
+    "clicked":"false"
+    },
+    {
+    "id": 8,
+    "name": "Snuffles",
+    "image": "./images/snuffles.jpg",
+    "clicked":"false"
+    },
+    {
+    "id": 9,
+    "name": "Squanchy",
+    "image": "./images/squanchy.jpg",
+    "clicked":"false"
+    }
+]
