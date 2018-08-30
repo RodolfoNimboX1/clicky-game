@@ -9,41 +9,47 @@ import Characters from './characters.json';
 
 let topScore = 0;
 let score = 0;
+let message = "Click an image to begin";
 
 class App extends Component {
   state = {
     Characters,
     topScore,
-    score
+    score,
+    message
   }
 
   setClicked = id => {
     const Characters = this.state.Characters;
-    const cardClicked = Characters.filter(Characters.id === id);
+    const cardClicked = Characters.filter(Character => Character.id === id);
 
     if (cardClicked[0].clicked) {
       score = 0;
-      alert("BUMP! Start over");
+      message= "BUMP! Start over";
 
       for (let i = 0; i < Characters.length; i++) {
         Characters[i].clicked = false;
       }
       this.setState({score});
-      this.setState({Characters})
+      this.setState({Characters});
+      this.setState({message});
     } else {
       cardClicked[0].clicked = true;
 
       score = score + 1;
+      message= "Nice! keep going"
 
       if (score > topScore) {
         topScore = score;
         this.setState({topScore});
+        this.setState({message});
       }
       Characters.sort((a, b) => {
         return 0.5 - Math.random();
       });
       this.setState({Characters});
       this.setState({score});
+      this.setState({message});
     }
   };
 
@@ -53,23 +59,30 @@ class App extends Component {
       <Nav 
       score={this.state.score}
       topScore={this.state.topScore}
-      />
+      >
+      <a className="nav-link">{this.state.message}</a>
+      <a className="nav-link">Score: {this.state.score} | Top Score: {this.state.topScore}</a>
+      </Nav>
       <Jumbotron>
           <img src={logo} className="App-logo" alt="Portal" />
           <h1 className="App-title">Welcome to Clicky Game!</h1>
           <p className="App-intro">
           Click on an image to earn points, but don't click on any more than once!
         </p>
-        </Jumbotron>
-        {this.state.Characters.map(Characters => (
+      </Jumbotron>
+        <div className="container">
+        <div className="row">
+        {this.state.Characters.map(Character => (
           <Cards 
           setClicked={this.setClicked}
-          id={Characters.id}
-          key={Characters.id}
-          image={Characters.image}
-          name={Characters.name}
+          id={Character.id}
+          key={Character.id}
+          image={Character.image}
+          name={Character.name}
           />
         ))}
+        </div>
+        </div>
         <Footer />
       </div>
     );

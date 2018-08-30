@@ -52,7 +52,7 @@ a {
   background: #6956af !important;
   height: 100px;
   width: 100%;
-  position: absolute;
+  position: fixed;
   bottom: 0%;
   overflow: auto;
   display: block;
@@ -68,4 +68,8 @@ a {
   color: white !important;
   text-align: left;
   padding: .5%;
+}
+
+.card {
+ 
 }
